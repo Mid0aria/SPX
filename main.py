@@ -54,9 +54,9 @@ def checkupdate():
     if(gitver != curver):
         print(info + "New update available. " + red + curver + white + " -> " + green + gitver)
         print(info + "Downloading update.")
-        urllib.request.urlretrieve(rawrepo + '/version', 'version')
-        urllib.request.urlretrieve(rawrepo + '/requirements.txt', 'requirements.txt')
         urllib.request.urlretrieve(rawrepo + '/main.py', 'main.py')
+        urllib.request.urlretrieve(rawrepo + '/requirements.txt', 'requirements.txt')
+        urllib.request.urlretrieve(rawrepo + '/version', 'version')
         print(info + "Update completed successfully please restart the program.")
         time.sleep(5)
         os._exit(1)
